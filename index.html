@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by micbuffa (http://jsbin.com/fopomo/14/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+canvas {
+
+  border: 2px solid #888888 ;
+  margin-left:350px;
+  margin-top: 70px;
+  overflow:auto;
+}
+
+body {
+            background: #101010;
+            color : green;
+         }
+
+#rooms {
+float:left;
+position: fixed;
+top:110px;
+left:200px;
+background-color:blue;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='black', endColorstr='black',GradientType=0);
+background-color: #2cbab5;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+border:1px solid black;
+display:inline-block;
+cursor:pointer;
+color:white;
+font-family:arial;
+font-size:15px;
+padding:9px 23px;
+text-decoration:none;
+text-shadow:0px 1px 0px black;
+
+}
+
+#conversation {
+	float:left;
+	background-color:#484848;
+	width:300px;
+	height:300px;
+	overflow:auto;
+}
+#data {
+	left:10px;
+	position: fixed;
+	width:200px;
+	height:20px;
+	top: 625px;
+}
+
+div#menu1 {
+	position: fixed;
+	float:left;
+	top:350px;
+	width:300px;
+	height:300px;
+	border:1px solid blue;
+}
+
+div#menu2 {
+	position: fixed;
+	top:100px;
+	width:300px;
+	height:200px;
+	border:1px solid blue;
+}
+
+#name {
+	float:left;	
+	border: 1px solid blue;
+	width:125px;
+	height: 50px;
+
+}
+#score {
+float:left;
+position: fixed;
+top:160px;
+border: 1px solid blue;
+width:121px;
+height: 50px;
+
+}
+
+#position {
+float:left;
+position: fixed;
+top:220px;
+border: 1px solid blue;
+width:120px;
+height: 50px;
+
+}
+#datasend {
+	left:215px;
+	border : 1px solid green;
+	position: fixed;
+	width : 90px;
+	height : 30px;
+	top: 622px; 
+	background-color: #2cbab5;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px black;
+
+
+}
+
+	
+</style>
+<audio preload="auto" id="sonGame">
+ 
+  	<source src="song/welcome-to-persia.wav" type="audio/wav">
+</audio>
+
+<audio preload="auto" id="son">
+ 
+  <source src="song/run.ogg" type="audio/ogg">
+  	
+</audio>
+
+<audio preload="auto" id="sonJump">
+ 
+  	<source src="song/jump.ogg" type="audio/ogg">
+</audio>
+
+<div id="menu1">
+
+
+	<div id="conversation">
+	<input id="data"/>
+	<input type="button" id="datasend" value="send" />
+	</div>
+</div>
+
+<div id="menu2">
+
+	<div id="name">name :</div>
+	<div id="score">score :</div>
+	<div id="position">position :</div>
+	
+</div>
+<!--<div style="float:right;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">-->
+	<div id="rooms"><b>ROOMS</b></div>
+	
+	
+<!--</div>-->
+<!--<div style="float:left; position:absolute;bottom:1;width:100px;height:100px;overflow:scroll-y;padding:10px;">-->npm install express
+	
+	
+</div>
+
+
+<canvas id="myCanvas"  width="800" height="600"></canvas>
+</head>
+<body>
+  
+  <script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script src="library/quadtree.js"></script>
+<script src="script/collisionsBox.js"></script>
+<script src="script/collisionsBoxLevel2.js"></script>
+<script src="script/scroll.js"></script>
+<script src="script/mainScroll.js"></script>
+<script src="script/carpet.js"></script>
+<script src="script/dagger.js"></script>
+<script src="script/chat.js"></script>
+<script src="script/gestionsCollisions.js"></script>
+<script src="script/main.js"></script>
+<script src="script/character.js"></script>
+<script src="script/ball.js"></script>
+<script src="script/timerUtils.js"></script>
+<script src="script/collisions.js"></script>
+<script src="script/obstacle.js"></script>
+</body>
+</html>
